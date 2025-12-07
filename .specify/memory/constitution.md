@@ -1,55 +1,79 @@
-# [PROJECT_NAME] Constitution
-<!-- Example: Spec Constitution, TaskFlow Constitution, etc. -->
+<!--
+Version change: 0.0.0 (initial) → 1.0.0
+List of modified principles:
+  - PRINCIPLE_1_NAME (old: [PRINCIPLE_1_NAME] → new: Accuracy and Verifiability)
+  - PRINCIPLE_1_DESCRIPTION (old: [PRINCIPLE_1_DESCRIPTION] → new: All information MUST be accurate and verifiable from reputable sources.)
+  - PRINCIPLE_2_NAME (old: [PRINCIPLE_2_NAME] → new: Clarity and Accessibility)
+  - PRINCIPLE_2_DESCRIPTION (old: [PRINCIPLE_2_DESCRIPTION] → new: Explanations MUST be clear and suitable for beginner–intermediate developers.)
+  - PRINCIPLE_3_NAME (old: [PRINCIPLE_3_NAME] → new: Reproducibility)
+  - PRINCIPLE_3_DESCRIPTION (old: [PRINCIPLE_3_DESCRIPTION] → new: All steps, commands, and examples MUST be fully reproducible.)
+  - PRINCIPLE_4_NAME (old: [PRINCIPLE_4_NAME] → new: Best Practices for AI Writing & SSG)
+  - PRINCIPLE_4_DESCRIPTION (old: [PRINCIPLE_4_DESCRIPTION] → new: Follow best practices for AI-assisted writing and static site generation.)
+  - PRINCIPLE_5_NAME (old: [PRINCIPLE_5_NAME] → new: Traceable and Cited Claims)
+  - PRINCIPLE_5_DESCRIPTION (old: [PRINCIPLE_5_DESCRIPTION] → new: All factual claims MUST be traceable to sources (APA style). Source mix: ~40% official documentation, ~30% academic/peer-reviewed, ~30% reputable technical sources. Zero plagiarism; all content MUST be original or properly cited.)
+  - PRINCIPLE_6_NAME (old: [PRINCIPLE_6_NAME] → new: Writing Clarity and Consistency)
+  - PRINCIPLE_6_DESCRIPTION (old: [PRINCIPLE_6_DESCRIPTION] → new: Writing clarity: Flesch-Kincaid grade 8–10. Consistent structure for all chapters (overview, steps, examples, troubleshooting, citations).)
+Added sections:
+  - Constraints
+  - Success Criteria
+Removed sections:
+  - None
+Templates requiring updates:
+  - .specify/templates/plan-template.md: ✅ updated
+  - .specify/templates/spec-template.md: ✅ updated
+  - .specify/templates/tasks-template.md: ✅ updated
+  - .specify/templates/commands/sp.phr.md: ⚠ pending (file not found)
+  - .specify/templates/commands/sp.analyze.md: ⚠ pending (file not found)
+  - .specify/templates/commands/sp.adr.md: ⚠ pending (file not found)
+  - .specify/templates/commands/sp.checklist.md: ⚠ pending (file not found)
+  - .specify/templates/commands/sp.clarify.md: ⚠ pending (file not found)
+  - .specify/templates/commands/sp.constitution.md: ⚠ pending (file not found)
+  - .specify/templates/commands/sp.git.commit_pr.md: ⚠ pending (file not found)
+  - .specify/templates/commands/sp.implement.md: ⚠ pending (file not found)
+  - .specify/templates/commands/sp.plan.md: ⚠ pending (file not found)
+  - .specify/templates/commands/sp.specify.md: ⚠ pending (file not found)
+  - .specify/templates/commands/sp.tasks.md: ⚠ pending (file not found)
+Follow-up TODOs:
+  - None
+-->
+# AI/Spec-Driven Book Creation using Docusaurus, Claude Code, and Spec-Kit Plus Constitution
 
 ## Core Principles
 
-### [PRINCIPLE_1_NAME]
-<!-- Example: I. Library-First -->
-[PRINCIPLE_1_DESCRIPTION]
-<!-- Example: Every feature starts as a standalone library; Libraries must be self-contained, independently testable, documented; Clear purpose required - no organizational-only libraries -->
+### Accuracy and Verifiability
+All information MUST be accurate and verifiable from reputable sources.
 
-### [PRINCIPLE_2_NAME]
-<!-- Example: II. CLI Interface -->
-[PRINCIPLE_2_DESCRIPTION]
-<!-- Example: Every library exposes functionality via CLI; Text in/out protocol: stdin/args → stdout, errors → stderr; Support JSON + human-readable formats -->
+### Clarity and Accessibility
+Explanations MUST be clear and suitable for beginner–intermediate developers.
 
-### [PRINCIPLE_3_NAME]
-<!-- Example: III. Test-First (NON-NEGOTIABLE) -->
-[PRINCIPLE_3_DESCRIPTION]
-<!-- Example: TDD mandatory: Tests written → User approved → Tests fail → Then implement; Red-Green-Refactor cycle strictly enforced -->
+### Reproducibility
+All steps, commands, and examples MUST be fully reproducible.
 
-### [PRINCIPLE_4_NAME]
-<!-- Example: IV. Integration Testing -->
-[PRINCIPLE_4_DESCRIPTION]
-<!-- Example: Focus areas requiring integration tests: New library contract tests, Contract changes, Inter-service communication, Shared schemas -->
+### Best Practices for AI Writing & SSG
+Follow best practices for AI-assisted writing and static site generation.
 
-### [PRINCIPLE_5_NAME]
-<!-- Example: V. Observability, VI. Versioning & Breaking Changes, VII. Simplicity -->
-[PRINCIPLE_5_DESCRIPTION]
-<!-- Example: Text I/O ensures debuggability; Structured logging required; Or: MAJOR.MINOR.BUILD format; Or: Start simple, YAGNI principles -->
+### Traceable and Cited Claims
+All factual claims MUST be traceable to sources (APA style). Source mix: ~40% official documentation, ~30% academic/peer-reviewed, ~30% reputable technical sources. Zero plagiarism; all content MUST be original or properly cited.
 
-### [PRINCIPLE_6_NAME]
+### Writing Clarity and Consistency
+Writing clarity: Flesch-Kincaid grade 8–10. Consistent structure for all chapters (overview, steps, examples, troubleshooting, citations).
 
+## Constraints
 
-[PRINCIPLE__DESCRIPTION]
+- Word count: 8,000–12,000 words.
+- Minimum 20 sources + minimum 8 diagrams/screenshots.
+- Output: Docusaurus Markdown + GitHub Pages deployment + final PDF.
 
-## [SECTION_2_NAME]
-<!-- Example: Additional Constraints, Security Requirements, Performance Standards, etc. -->
+## Success Criteria
 
-[SECTION_2_CONTENT]
-<!-- Example: Technology stack requirements, compliance standards, deployment policies, etc. -->
-
-## [SECTION_3_NAME]
-<!-- Example: Development Workflow, Review Process, Quality Gates, etc. -->
-
-[SECTION_3_CONTENT]
-<!-- Example: Code review requirements, testing gates, deployment approval process, etc. -->
+- Book builds in Docusaurus without errors and deploys to GitHub Pages successfully.
+- All claims are verified and properly cited.
+- Zero plagiarism and consistent writing across chapters.
+- Spec-Kit Plus validation passes.
 
 ## Governance
-<!-- Example: Constitution supersedes all other practices; Amendments require documentation, approval, migration plan -->
 
-[GOVERNANCE_RULES]
-<!-- Example: All PRs/reviews must verify compliance; Complexity must be justified; Use [GUIDANCE_FILE] for runtime development guidance -->
+The constitution defines the foundational principles and standards for the project.
+Amendments to this constitution require a documented proposal, approval by key stakeholders, and a migration plan if necessary to ensure compliance.
 
-**Version**: [CONSTITUTION_VERSION] | **Ratified**: [RATIFICATION_DATE] | **Last Amended**: [LAST_AMENDED_DATE]
-<!-- Example: Version: 2.1.1 | Ratified: 2025-06-13 | Last Amended: 2025-07-16 -->
+**Version**: 1.0.0 | **Ratified**: 2025-12-04 | **Last Amended**: 2025-12-04

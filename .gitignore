@@ -1,0 +1,63 @@
+# Gitignore for Physical AI & Humanoid Robotics Book Project
+
+# Node.js/JavaScript/TypeScript
+node_modules/
+dist/
+build/
+*.log
+.env*
+.docusaurus/
+.cache/
+yarn-error.log
+.yarn/
+.pnp.*
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+dist/
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+
+# C++
+build/
+bin/
+obj/
+out/
+*.o
+*.so
+*.a
+*.exe
+*.dll
+*.gch
+*.pch
+CMakeCache.txt
+CMakeFiles/
+Makefile
+cmake_install.cmake
+install/
+log/
+tmp/
+
+# Universal
+.DS_Store
+Thumbs.db
+*.tmp
+*.swp
+.vscode/
+.idea/
+.terraform/
+*.tfstate*
+*.tfvars
+.terraform.lock.hcl
+
+# IDE-specific
+.classpath
+.project
+.settings
+.vs/
+.history/
+.claude/

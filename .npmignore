@@ -1,0 +1,13 @@
+# NPM Ignore for Node.js/TypeScript Project
+
+node_modules/
+dist/
+build/
+*.log
+.env*
+.docusaurus/
+.cache/
+yarn-error.log
+.yarn/
+.pnp.*
+coverage/
