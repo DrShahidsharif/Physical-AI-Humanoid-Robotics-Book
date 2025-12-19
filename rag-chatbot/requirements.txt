@@ -1,0 +1,11 @@
+fastapi
+uvicorn
+qdrant-client
+openai
+httpx
+pydantic
+python-dotenv
+sqlalchemy
+sentence-transformers
+torch
+transformers
