@@ -1,0 +1,22 @@
+Artificial Intelligence and Large Language Models
+
+Introduction to AI
+Artificial Intelligence (AI) is intelligence demonstrated by machines, in contrast to the natural intelligence displayed by humans and animals. Leading AI textbooks define the field as the study of "intelligent agents": any device that perceives its environment and takes actions that maximize its chance of successfully achieving its goals.
+
+Large Language Models
+Large language models (LLMs) are a type of language model notable for their size and capabilities. These models are trained on vast amounts of text data and can generate human-like text, answer questions, and perform various natural language processing tasks.
+
+Retrieval-Augmented Generation (RAG)
+Retrieval-Augmented Generation (RAG) is a technique that combines the generative capabilities of LLMs with the precision of information retrieval. It retrieves relevant documents from a knowledge base and uses them as context for generating responses.
+
+Vector Databases
+Vector databases store and index vector embeddings, allowing for fast similarity searches. They are essential for RAG systems as they enable efficient retrieval of relevant information based on semantic similarity.
+
+Machine Learning Fundamentals
+Machine learning is a method of data analysis that automates analytical model building. It is a branch of artificial intelligence based on the idea that systems can learn from data, identify patterns and make decisions with minimal human intervention.
+
+Neural Networks
+Neural networks are a series of algorithms that mimic the operations of a human brain to recognize relationships between vast amounts of data. They are used in various applications such as image recognition, speech recognition, and natural language processing.
+
+Deep Learning
+Deep learning is part of a broader family of machine learning methods based on artificial neural networks with representation learning. Learning can be supervised, semi-supervised or unsupervised.

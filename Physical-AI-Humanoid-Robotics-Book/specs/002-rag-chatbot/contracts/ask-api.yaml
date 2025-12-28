@@ -1,0 +1,58 @@
+openapi: 3.0.0
+info:
+  title: RAG-Based Interactive Book Chatbot - General Ask API
+  description: API for asking questions about the entire book content
+  version: 1.0.0
+servers:
+  - url: http://localhost:8000
+    description: Development server
+paths:
+  /ask:
+    post:
+      summary: Ask a question about the entire book
+      description: Submit a question to be answered based on the entire book's content
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                question:
+                  type: string
+                  description: The question to ask about the book
+                  example: "What is the main theme of this book?"
+                session_id:
+                  type: string
+                  description: The user's session identifier
+                  example: "sess_1234567890"
+              required:
+                - question
+                - session_id
+      responses:
+        '200':
+          description: Successful response with answer and sources
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  answer:
+                    type: string
+                    description: The answer to the question
+                    example: "The main theme of this book is..."
+                  sources:
+                    type: array
+                    items:
+                      type: string
+                    description: List of source references used to generate the answer
+                    example: ["Chapter 1", "Chapter 3"]
+                  session_id:
+                    type: string
+                    description: The session identifier
+        '400':
+          description: Bad request - invalid input
+        '500':
+          description: Internal server error
+      tags:
+        - Ask

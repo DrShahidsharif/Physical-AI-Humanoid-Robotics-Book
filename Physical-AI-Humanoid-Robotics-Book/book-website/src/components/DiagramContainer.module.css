@@ -1,0 +1,21 @@
+.diagramContainer {
+  text-align: center;
+  margin: 2rem 0;
+  padding: 1rem;
+  border: 1px dashed var(--ifm-color-primary);
+  border-radius: 4px;
+  background-color: rgba(37, 99, 235, 0.03);
+}
+
+.diagramTitle {
+  margin: 0 0 0.5rem 0;
+  color: var(--ifm-color-primary);
+  font-size: 1rem;
+}
+
+.diagramContent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100px;
+}

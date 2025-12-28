@@ -1,0 +1,53 @@
+# Isaac ROS Perception Pipeline Configuration
+# This configuration demonstrates a typical GPU-accelerated perception pipeline
+
+components:
+  # Image input from camera
+  - name: "image_loader"
+    type: "isaac_ros::ImageLoader"
+    parameters:
+      image_path: "/path/to/input/image.jpg"
+
+  # Resize image for processing
+  - name: "image_resize"
+    type: "isaac_ros::ImageResize"
+    parameters:
+      width: 640
+      height: 480
+
+  # Object detection using TensorRT
+  - name: "detection_model"
+    type: "isaac_ros::DetectionModel"
+    parameters:
+      engine_file: "/path/to/tensorrt/engine.plan"
+      input_binding_name: "input"
+      output_binding_name: "output"
+      confidence_threshold: 0.5
+
+  # 3D pose estimation
+  - name: "pose_estimator"
+    type: "isaac_ros::PoseEstimator"
+    parameters:
+      model_path: "/path/to/3d/model.obj"
+      camera_matrix: [615.0, 0.0, 320.0, 0.0, 615.0, 240.0, 0.0, 0.0, 1.0]
+
+  # Output results
+  - name: "result_publisher"
+    type: "isaac_ros::ResultPublisher"
+
+connections:
+  - from: "image_loader/image"
+    to: "image_resize/image"
+  - from: "image_resize/image"
+    to: "detection_model/image"
+  - from: "detection_model/detections"
+    to: "pose_estimator/detections"
+  - from: "pose_estimator/poses"
+    to: "result_publisher/poses"
+
+# Performance parameters
+performance:
+  gpu_id: 0
+  memory_pool_size: 512  # MB
+  batch_size: 1
+  precision: "fp16"  # or "fp32", "int8"
